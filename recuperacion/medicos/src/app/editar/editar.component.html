@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+            <fieldset class="form-group">
+                <div class="col-sm-12">
+                <label class="control-label" for="nombre"><b>Nombre</b></label>
+                <input type="text" class="form-control" required [(ngModel)]="usuario.Nom1_doctor" name="Nom1_doctor">
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="col-sm-12">
+                <label class="control-label" for="email"><b>Apellido</b></label>
+                <input type="text" class="form-control" required [(ngModel)]="usuario.Ape1_doctor" name="Ape1_doctor">
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="col-sm-12">
+                <label class="control-label" for="email"><b>Tipo doc</b></label>
+                <input type="text" class="form-control" required [(ngModel)]="usuario.Tip_documento" name="Tip_documento">
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="col-sm-12">
+                <label class="control-label" for="email"><b>Numero doc</b></label>
+                <input type="number" class="form-control" required [(ngModel)]="usuario.Num_doc" name="Num_doc">
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="col-sm-12">
+                <label class="control-label" for="email"><b>Especialidad</b></label>
+                <input type="text" class="form-control" required [(ngModel)]="usuario.Especialidad" name="Especialidad">
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Submit</button>
+            </div>
+            </fieldset>
+      </form>
+    </div>
+  </div>
+  

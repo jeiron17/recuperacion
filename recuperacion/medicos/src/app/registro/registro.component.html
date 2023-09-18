@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.component.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Usuario</h1>
+        <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required required [(ngModel)]="usuario.Nom_usuario" name="Nom_usuario">
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required [(ngModel)]="usuario.Correo_electronico" name="Correo_electronico">
+            
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required [(ngModel)]="usuario.Password_usu" name="Password_usu">
+
+            <button type="submit" [disabled]="!usuarioForm.form">Registrarse</button>
+
+        </form>
+        <p>
+          Si ya estas registrado <a href="/crud_angular/src/app/login-usuario/login-usuario.component.html">Iniciar Sesion</a>
+        </p>
+    </div>
+</body>
+</html>
+
+
